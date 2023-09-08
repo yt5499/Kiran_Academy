@@ -1,0 +1,105 @@
+NOTES
+
+6/09/2023
+
+1. the variable is name given to some memory location
+2. the variables are used to store the values
+3. when we need to store the values, we mustb use variables.
+4. we can take n numbere of variables in our program; but we should take only required number of variables.
+
+~ namming conventions=
+1. any combination of a-z A-Z 0-9 _ and $ are allowed
+2. the var name should not start with digit
+3. keywords are not allowed as a variable name
+
+---------------------------------------------------------------------------------------------------------------------
+
+7//09/2023
+
+~Operators:
+
+1. Arithmatic- basic math operations
+2. relational- comparison
+3. Assignment- to assign the value
+4. logical- think logically and give final response
+5. increament/decreeament
+6. bitwise - bit by bit binary
+7. misc- mixures
+
+1. Arithmetic operators:-
+	+ plus == adds the values
+	- minus == substracts the values
+	* asterisk == multiplies
+	/ slash == divides and gives quotient
+	% modulas == divides and gives remainder
+	
+2. Relational operators(is the only operator which returns only true or false):-
+	<   --  less than
+	<=  --  less than or equal to
+	>   --  greater than
+	>=  --  greater than or equal to
+	==  --  equal equal to
+	!=  --  not equal to
+
+
+8/9/2023
+
+3. Assignment operators:-
+	=	--	assigns the value
+	+=	--	adds the value using short-form(eg- int a += 2 --> int a = a+2)
+	-=	--	                      |same|
+	*=	--	                      |same|
+	/=	--	                      |same|
+	%=	--	                      |same|
+	<<=	--	
+	>>=	--	
+	<<<<=	--	
+	>>>>=	--
+	
+4. Logical operators:-
+	1. &&	--	AND
+	Truth table --
+	i/p	i/p	o/p
+	0	0	0
+	0	1	0
+	1	0	0
+	1	1	1
+	
+	
+	2. ||	--	OR
+	Truth table --
+	i/p	i/p	o/p
+	0	0	0
+	0	1	0
+	1	0	0
+	1	1	1
+	
+	
+	3. ~	--	NOT
+	Truth table --
+	i/p	o/p
+	0	1
+	1	0
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
