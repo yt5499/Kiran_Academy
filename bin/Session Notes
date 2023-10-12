@@ -4,8 +4,8 @@ NOTES
 
 1. the variable is name given to some memory location
 2. the variables are used to store the values
-3. when we need to store the values, we mustb use variables.
-4. we can take n numbere of variables in our program; but we should take only required number of variables.
+3. when we need to store the values, we must use variables.
+4. we can take n number of variables in our program; but we should take only required number of variables.
 
 ~ namming conventions=
 1. any combination of a-z A-Z 0-9 _ and $ are allowed
@@ -80,16 +80,100 @@ NOTES
 	i/p	o/p
 	0	1
 	1	0
-		
+
+
+October 06
+IB- Instance block
+
+1. IB is optional
+2. we can write n number of ib's in the class
+3. the ib gets called everytime when instance is created
+4. In case of multiple IB's top - down sequence is follwed 
+5. In case of multiple IB's ALL IB's will be called for all objects
+6. In case of multiple IBs, last IB value set is mainted
+7. The nested IBs are not allowed
+8. We can write n number of lines of coode in IB
+
+October 7
+SB- Static Block
+1. SB is optional
+2. we can write n number of SB's in the class
+3. the SB gets called every time when instance is created
+4. In case of multiple SB's top - down sequence is followed 
+5. When class is loaded into memory, SB gets called/executed
+6. In case of multiple SBs, ALL  SB value will be called
+7. The nested SBs are not allowed
+8. We can write n number of lines of code in SB
+9. SB can acccess ONLY static variables
+10. The IB can access BOTH static as well as non-static variables
+
+
+October 9:
+Constructor: It is a special method which has same name as that of class and it has no return type; not even void.
+
+We must use new keyword to call constructor, Without new keyword, the constructor cannot be called.
+
+Types of constructors:
+1. Parameterized(define by developers)
+2. Non-Parameterized(define by developers)
+3. Default (Defined by system)
+
+The default constructor is written/provided by the system IF and ONLY IF developer has NOT defined any constructor in the class
+
+The default constructor has NO parameters
+
+
+-----
+The developer can NOT define/edit/see default constructor.
+We can define multiple constructors in the class with the unique signatures.
+The priority flows like SB -> IB -> Constructor.
+The constructor should be called 'n' times to create 'n' objects.
 
 
 
+October 11:
+Inheritance(Day 2) - It is process of creating new class(Sub/Child Class) extending pre-existing class(Super/Parent Class), where extended class 
+	access all properties of Super-Class.
+	
+1. The final keyword stops the inheritance
+2. The final class can not be extended
+3. The constructor of parent has more priority than IB of child
+4. Using classes, multiple inheritance is not possible. However we can achieve it by using interface.
+5. In case of IBs, IB Parent -> IB Child
+6. In case of SBs, SB Parent -> SB Child
+7. In case of Constructor, Cons Parent -> Cons Child
+8. In case of IBs, SBs and Constructors,
+	SB Parent -> SB Child -> IB Parent -> Cons Parent -> IB Child -> Cons Child
+9. The hybrid inheritance is combination of any of other types.
+10. Only single/simple inheritance can have fixed diagram. Other types involves 'n' classes.
+11. Minimum number of classes for Hierarchy, multiple, multi-level and Hybrid types is THREE.  
 
 
+October 12:
+Polymorphism: An ability to gain multiple forms.
 
+Polymorphism Types
+1. Overloading (Synonyms)
+* Method Overloading
+* Early binding
+* Static Polymorphism
+* Compile Time Poly.
 
+2. Overriding(Synonyms)
+* Method Overriding
+* Late binding
+* Dynamic Polymorphism
+* Run Time Poly.
 
+#OverLoading:
 
+Method overloading = Normal task + Extra task
+
+Notes-
+1. Methods with SAME name but DIFFERENT signature are called as Overloaded method.
+2. We can overload a method 'n' times.
+3. Whenever we need to achieve some functionality in different ways, we can overload a method.
+4. The constructor can be overloaded.
 
 
 
