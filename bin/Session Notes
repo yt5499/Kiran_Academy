@@ -174,6 +174,92 @@ Notes-
 2. We can overload a method 'n' times.
 3. Whenever we need to achieve some functionality in different ways, we can overload a method.
 4. The constructor can be overloaded.
+5. The method overloading is possible with or without inheritance.
+
+
+
+October 16:
+*this keyword is used in identifying duplicate values.
+
+1. The method overriding is NOT possible without inheritance.
+2. The method overloading is possible with or without inheritance.
+3. Method overriding = Method re-defined
+4. The use of "super" keyword to call properties of parent class in child class is optional.
+5. Method overriding is optional.
+6. If we want to enhance already defined method in child class, we must override the method.
+7. Method with SAME NAME & SAME SIGNATURE in "inherited" class is called as method overriding.
+8. We can NOT override the constructor.
+9. The final method can NOT be overrided.
+10. We can override method 'n' times.
+
+
+October 17:
+1. Abstract = incomplete
+2. The interface is NOT a class.
+3. The interface is collection abstract methods and public static and final variables.
+4. We can NOT instantiate the interface. Means we can NOT create object of interface.
+5. We can implement the interface in 'n' number of classes.
+6. The class which implements the interface MUST define the abstract methods interface.
+7. The interface is ALWAYS implemented in a class.
+8. The normal class can NOT host abstract methods.
+9. The variables in the interface are by default public, static and final.
+10. Abstract method:
+	The method with ONLY declaration and NO body/definition.
+11. Why Interface?
+Ans1- When we do not have concrete definition of a method we use interface.
+Ans2- To achieve multiple inheritance.
+
+
+
+October 19:
+*abstract = incomplete
+1. The abstract class contains normal & abstract methods.
+2. The abstract class MUST have a child class(must be implemented by child class)
+3. The abstract class can NOT be instantiated(we can NOT create objects of abstract class)
+4. To make class abstract, we use 'abstract' keyword.
+5. When there is abstract keyword that class must be inherited.
+6. We can NOT declare abstract class as a final,it should be either abstract or final.
+7. The variables in abstract class are absolutely normal.
+8. The abstract class must be EXTENDED.
+9. The interface achieves 100% abstraction, normal class achieves 0% abstraction whereas the abstract class achieve 
+   partial abstraction(both complete and incomplete methods).
+10. The abstract class can be extended in multiple classes.
+11. The child class of abstract class should either define all abstract methods or make itself as abstract.
+12. Using abstract classes, multiple inheritance is NOT possible.
+13. We can define constructor in abstract class but it is NEVER used/suggested.
+
+
+October 25:
+
+* Array- it is collection of similar elements/values in consecutive memory location.
+* Use of array- is to reduce memory traversal(as ordinary variables)
+* Types of arrays- 1] Initialized Array
+				   2] Non-Initialized Array
+				   EXTRA- 1D Array, 2D Array, Multi-Dimentional Array.
+				   
+
+
+October 26:
+
+1. The index of array always starts with 0.
+2. The length of array always starts with 1.
+3. There is huge difference between i and arr[i].
+4. To process all array elements, formulate once in the loop and process arr[i] once.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
