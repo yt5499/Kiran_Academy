@@ -247,7 +247,35 @@ October 26:
 4. To process all array elements, formulate once in the loop and process arr[i] once.
 
 
+November 3
+1. Strings are immutable
+2. String pool:
+	--> It is dedicated memory for storing all string values ONLY.
+	* It supports memory utilization.
+	* Immutable = permanent = constant = unchangable 
+3. Declaring string in two ways
+	1) String str = "Hello";				**Recommended way for creating string**
+	2) String str = new String("Hello")
+4. '==' checks whether two strings values belongs to same memory location or not.
+5. '.equalsto' checks whether two string values are same or not.
 
+
+
+November 6
+
+* String are immutable - correct
+* But, if required, we can make strings mutable as well
+* StringBuilder & StringBuffer
+
+* StringBuffer:
+	1. All methods in this class are synchronized(one-by-one)
+	2. Thread-safe
+	3. Slower in execution
+	
+* StringBuilder:
+	1. All methods in this class are NOT synchronized(At a time)
+	2. Thread-Unsafe
+	3. Faster in execution
 
 
 
