@@ -80,6 +80,37 @@ NOTES
 	i/p	o/p
 	0	1
 	1	0
+	
+	
+October 5::
+* What is class?
+	- The class is blueprint/prototype model of an object.
+	- The class is collection of Variables & Methods ONLY.
+	
+* What is object?
+	- The object is replica/photocopy of the class.
+	- The Object is created with the help of Class.
+	- In interview don't say like "CLASS IS COLLECTION OF OBJECTS"
+	
+	
+* Encapsulation::
+	- The encapsulation is binding logically related data together.
+	- In a class, take only those parameters which are applicable to that category.
+	  e.g.- 
+	  class Bird{
+	  	will have properties like:
+	  		color, sound, locationOfBird, breed, etc.
+	  	not like:
+	  		salary, education, etc.
+	  }
+
+* Getters & Setters Methods::
+	- The Getter method Gets(Reads) the value.
+	- The Setter method Sets(Writes) the value.
+	- The Getter method will ALWAYS return the value but NEVER takes the parameter.
+	- The Setter method will NEVER return the value but ALWAYS take the parameter.
+	- The Getters & Setters Methods should always be PUBLIC so that you can access PRIVATE variables via PUBLIC get/set.
+	- The Getters & Setters Methods are dedicated to a variable; not combined.
 
 
 October 06
@@ -92,7 +123,7 @@ IB- Instance block
 5. In case of multiple IB's ALL IB's will be called for all objects
 6. In case of multiple IBs, last IB value set is mainted
 7. The nested IBs are not allowed
-8. We can write n number of lines of coode in IB
+8. We can write n number of lines of code in IB
 
 October 7
 SB- Static Block
