@@ -254,7 +254,7 @@ Ans2- To achieve multiple inheritance.
 October 19:
 *abstract = incomplete
 1. The abstract class contains normal & abstract methods.
-2. The abstract class MUST have a child class(must be implemented by child class)
+2. The abstract class MUST have a child class(must be extended by child class)
 3. The abstract class can NOT be instantiated(we can NOT create objects of abstract class)
 4. To make class abstract, we use 'abstract' keyword.
 5. When there is abstract keyword that class must be inherited.
@@ -323,7 +323,9 @@ November 6
 
 
 
-
+IMPORTANT Points::
+	- final variable = constant
+	- static & final variable = pure constant
 
 
 
