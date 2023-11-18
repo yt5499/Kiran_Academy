@@ -1,0 +1,835 @@
+1) What all datatypes do you know in Java?
+In Java, there are two categories of data types: primitive and reference. Primitive data types include byte, short, int, float, long, double, boolean, and char. Reference data types include String and user-defined classes.
+
+2) Can you give the size required for each datatype?
+byte: 1 byte
+short: 2 bytes
+int: 4 bytes
+float: 4 bytes
+long: 8 bytes
+double: 8 bytes
+boolean: 1 byte
+char: 2 bytes
+3) What is the default value of byte, short, int, float, long, double, boolean, char?
+byte, short, int, long: 0
+float, double: 0.0
+boolean: false
+char: '\u0000'
+4) Is String a datatype?
+Yes, String is a reference data type in Java.
+
+5) Can you define a class?
+A class in Java is a blueprint for creating objects. It encapsulates data and behaviors (methods) that operate on the data. It serves as a template for creating instances or objects.
+
+6) Can you define an object?
+An object is an instance of a class. It is a runtime entity with state and behavior. Objects are created from classes and represent real-world entities in a Java program.
+
+7) Can you list out some built-in classes in Java?
+Some built-in classes in Java include String, Integer, Double, System, Math, Scanner, and ArrayList.
+
+8) What is the difference between global and local variables? Tell me any 3 to 4 differences.
+Scope:
+
+Global variables have a broader scope and can be accessed throughout the program.
+Local variables have a limited scope and are only accessible within the block or method where they are declared.
+Lifetime:
+
+Global variables exist throughout the program's execution.
+Local variables exist only as long as the block or method in which they are declared is executing.
+Initialization:
+
+Global variables are initialized automatically with default values.
+Local variables must be explicitly initialized before use.
+Memory Allocation:
+
+Global variables are stored in the heap memory.
+Local variables are stored in the stack memory.
+9) Can a class be a return type of any method?
+Yes, a class can be a return type of a method in Java.
+
+10) What is a block in Java? What is its syntax? When is it getting executed?
+A block in Java is a set of statements enclosed in curly braces {}. It can contain variable declarations, method declarations, and other statements. Blocks are executed when the control flow enters them during program execution.
+
+java
+Copy code
+{
+    // statements
+}
+11) What is the superclass of all classes in Java?
+The superclass of all classes in Java is the Object class.
+
+12) Do you know some methods in the Object class? Can you name some of them?
+Some methods in the Object class include toString(), equals(), hashCode(), getClass(), wait(), notify(), and notifyAll().
+
+13) What is the package and import keyword?
+package: It is used to organize classes into namespaces. A package is a collection of related classes and interfaces.
+import: It is used to bring classes or entire packages into scope, allowing them to be referenced without using their fully qualified names.
+14) Can we give a fully qualified class name instead of importing that class? If yes, how to do that?
+Yes, you can use the fully qualified class name instead of importing. For example:
+
+java
+Copy code
+java.util.ArrayList list = new java.util.ArrayList();
+15) What are access modifiers/access specifiers available in Java? Explain each of them in detail.
+Java has four access modifiers:
+
+public: Accessible from any other class.
+protected: Accessible within the same package or by subclasses.
+default (no modifier): Accessible only within the same package.
+private: Accessible only within the same class.
+16) Can you elaborate on the protected access specifier in Java?
+The protected access specifier allows access within the same package and by subclasses, even if they are in different packages. It provides a level of encapsulation by restricting direct access from classes outside the package.
+
+17) What is encapsulation? Explain briefly.
+Encapsulation is the concept of bundling data (attributes) and methods (functions) that operate on the data within a single unit known as a class. It restricts direct access to some of the object's components, providing control over the data by using access modifiers.
+
+18) Why are global variables recommended to be private?
+Private global variables enhance encapsulation by preventing direct access from outside the class. It helps control and maintain the integrity of the data, reducing the risk of unintended modification.
+
+19) Can you give a real-time example of encapsulation?
+An example of encapsulation is a class representing a bank account. The account balance is kept private, and access to it is controlled through methods like deposit() and withdraw(). This encapsulation ensures that the balance is modified in a controlled manner.
+
+20) Explain inheritance briefly.
+Inheritance is a mechanism in Java that allows a class (subclass/child) to inherit properties and behaviors from another class (superclass/parent). It promotes code reusability and establishes an "is-a" relationship between classes.
+
+21) Give a real-time example of inheritance.
+An example of inheritance is a vehicle hierarchy, where a base class Vehicle might have common properties like fuelType and methods like start(). Subclasses like Car and Motorcycle can inherit from Vehicle and have additional features specific to each type.
+
+22) What are the types of inheritance?
+The types of inheritance in Java are single inheritance (class inherits from one superclass) and multiple inheritance (interface inherits from multiple interfaces). However, Java does not support multiple inheritance for classes to avoid the "diamond problem."
+
+23) Can you explain the advantages of inheritance?
+Advantages of inheritance include code reuse, modularity, and the ability to create a hierarchical structure that reflects real-world relationships. It promotes the creation of more maintainable and organized code.
+
+24) Why is multiple inheritance not supported in the case of classes but in the case of interfaces?
+Multiple inheritance for classes can lead to the "diamond problem," where ambiguity arises when a class inherits from two classes with a common ancestor. Interfaces in Java support multiple inheritance because they provide a way to achieve the benefits of multiple inheritance without the associated problems.
+
+25) What is multilevel inheritance?
+Multilevel inheritance involves a chain of inheritance where a subclass inherits from another subclass, forming a hierarchy. For example, Class A -> Class B -> Class C.
+
+26) What is dynamic dispatch?
+Dynamic dispatch, also known as runtime polymorphism, allows a method to be invoked at runtime based on the actual type of the object rather than the reference type. It is achieved through method overriding.
+
+27) Can we assign a subclass to a superclass, and what will happen if we do that? At compile time and runtime?
+Yes, you can assign a subclass instance to a superclass reference. At compile time, the compiler checks if the methods called on the reference are valid for the superclass. At runtime, the actual method from the subclass is executed.
+
+28) Can private variables or methods inherit?
+Private variables and methods are not inherited by subclasses. They are not accessible outside the class in which they are defined.
+
+29) Explain the super keyword and its syntax.
+The super keyword in Java is used to refer to the immediate parent class's object. It can be used to call the parent class's methods, access its fields, or invoke its constructor.
+
+java
+Copy code
+super.method();  // Call a method from the parent class
+super.field;     // Access a field from the parent class
+super();         // Invoke the constructor of the parent class
+30) Explain the this keyword and its syntax.
+The this keyword in Java is a reference variable referring to the current object. It is used to differentiate instance variables from local variables when they have the same name.
+
+java
+Copy code
+this.field;   // Access an instance variable
+this.method(); // Call a method of the current object
+this();       // Call a constructor of the same class
+31) Do you know the rule for writing super(), this() in a program?
+The rule for using super() and this() is that they must be the first statement in a constructor. If used, they must be placed before any other statements in the constructor.
+
+32) What is a constructor in Java?
+A constructor in Java is a special method with the same name as the class. It is used to initialize the object's state and is called automatically when an object is created.
+
+33) Can we call one constructor from another constructor?
+Yes, in Java, you can call one constructor from another using this() or super(). This is known as constructor chaining.
+
+34) What will happen if we make a constructor private?
+If a constructor is made private, it cannot be accessed or invoked from outside the class. This prevents the instantiation of objects from outside the class, making it suitable for creating singleton classes.
+
+35) What are the ways to call constructors?
+Constructors can be called in the following ways:
+
+Implicitly: Automatically when an object is created.
+Explicitly: Using this() or super() to invoke another constructor within the same class or the superclass.
+36) How many constructors can we have in a program? If more than one is allowed, what care do we need to take?
+A program can have multiple constructors in a class. If more than one constructor is defined, they should have different parameter lists (overloading). Care should be taken to ensure that each constructor provides a unique way to initialize the object.
+
+37) Define polymorphism.
+Polymorphism in Java allows objects of different types to be treated as objects of a common type. It can be achieved through method overloading and method overriding.
+
+38) Give a real-time example of polymorphism.
+An example of polymorphism is a draw() method in various shapes (circles, rectangles, triangles). Each shape class implements its own version of draw(), and they can all be treated as shapes, allowing for a common method to work with different types of shapes.
+
+39) What is method overloading? Explain in detail all the rules.
+Method overloading is the concept of having multiple methods in the same class with the same name but different parameter lists. Rules for method overloading include:
+
+The number of parameters.
+The type of parameters.
+The order of parameters.
+40) What is method overriding? Explain in detail all the rules.
+Method overriding is the concept of providing a specific implementation of a method in a subclass that is already defined in its superclass. Rules for method overriding include:
+
+The method in the subclass must have the same signature (name, return type, and parameters) as in the superclass.
+The access level of the overriding method cannot be more restrictive than the overridden method.
+The overriding method cannot throw checked exceptions broader than the overridden method.
+41) What is the @Override annotation?
+The @Override annotation is used in Java to indicate that a method in a subclass is intended to override a method in its superclass. It helps the compiler catch errors if the annotated method does not actually override a method in the superclass.
+
+42) Can we override a static method?
+No, static methods cannot be overridden in Java. They are associated with the class rather than an instance, so the concept of overriding (which is based on polymorphism with instances) does not apply to static methods.
+
+43) Can we override constructors?
+Constructors cannot be overridden in Java. Each class has its own constructor, and there is no concept of inheritance or polymorphism regarding constructors.
+
+44) Can we override final methods?
+No, final methods cannot be overridden. The final keyword on a method indicates that it cannot be changed by subclasses.
+
+45) Can a constructor be overloaded?
+Yes, a constructor can be overloaded by defining multiple constructors in the same class with different parameter lists.
+
+46) What is the static keyword in Java?
+The static keyword in Java is used to create variables and methods that belong to the class rather than instances of the class. It is shared among all instances of the class.
+
+47) Can a local variable be static?
+No, local variables cannot be declared as static. The static keyword is applicable to class-level variables and methods.
+
+48) What is the difference between instance variables and static variables?
+Instance variables are associated with an instance of a class and have a separate copy for each object.
+Static variables are associated with the class and have a single copy shared among all instances of the class.
+49) Do you know the static block in Java? When is it getting executed?
+Yes, a static block is a block of code enclosed in curly braces and preceded by the static keyword. It is executed when the class is loaded into the JVM, and it runs only once.
+
+java
+Copy code
+static {
+    // static block code
+}
+50) Can a constructor be static?
+No, a constructor cannot be declared as static. Constructors are called to initialize object instances, and making them static would contradict their purpose of object creation.
+
+These responses are designed to provide concise and accurate answers to each question. Feel free to ask if you need further clarification or additional details on any specific topic!
+
+
+51) Can we call static methods and variables with an object? Why is it not preferable?
+Yes, static methods and variables can be called using an object, but it is not preferable. The preferred way is to call them using the class name because static members belong to the class, not to any particular instance. Calling them through an object may lead to confusion and is generally considered bad practice.
+
+Example:
+
+java
+Copy code
+ClassName.staticMethod();  // Preferred
+objectName.staticMethod(); // Not preferable
+52) What is the final keyword in Java?
+The final keyword in Java is used to restrict the user. It can be applied to variables, methods, and classes.
+
+53) What will happen if a class is final?
+If a class is declared as final, it cannot be subclassed (extended). It prevents other classes from inheriting from it.
+
+54) What will happen if a method is final?
+If a method is declared as final, it cannot be overridden by subclasses. The implementation in the superclass is the final implementation that will be used.
+
+55) What will happen if a variable is final?
+If a variable is declared as final, its value cannot be changed once it is assigned. It becomes a constant.
+
+56) Can a local variable be final?
+Yes, a local variable can be declared as final. It means the variable cannot be reassigned after its initial assignment.
+
+57) What is abstraction in Java?
+Abstraction is a fundamental concept in object-oriented programming that allows you to hide complex implementation details and show only the essential features of an object. It is achieved through abstract classes and interfaces.
+
+58) How to achieve abstraction? Explain in detail.
+Abstraction in Java is achieved through abstract classes and interfaces. An abstract class is a class that cannot be instantiated and may contain abstract methods (methods without a body). Abstract classes can also have concrete methods. Interfaces are similar but can only contain abstract methods.
+
+java
+Copy code
+// Abstract Class
+abstract class Shape {
+    abstract void draw();  // Abstract method
+}
+
+// Interface
+interface Drawable {
+    void draw();  // Abstract method
+}
+59) Can you explain the interface with at least 4 points about it?
+Abstract Methods: Interfaces can only have abstract methods (methods without a body).
+Multiple Inheritance: A class can implement multiple interfaces, allowing for multiple inheritance of behavior.
+No Constructor: Interfaces cannot have constructors.
+Public by Default: All methods in an interface are implicitly public and abstract.
+60) Can you explain the abstract class with at least 4 points about it?
+Abstract Methods: Abstract classes can have abstract methods and concrete methods.
+Single Inheritance: A class can extend only one abstract class.
+Constructor: Abstract classes can have constructors.
+Access Modifiers: Abstract classes can have a variety of access modifiers for their methods and fields.
+61) Can you list out the differences between an interface and an abstract class in Java? At least 4.
+Multiple Inheritance:
+
+Interface: Supports multiple inheritance by allowing a class to implement multiple interfaces.
+Abstract Class: Supports single inheritance, as a class can only extend one abstract class.
+Method Implementation:
+
+Interface: All methods are implicitly abstract; no method has a body.
+Abstract Class: Can have both abstract and concrete methods, with some methods having an implementation.
+Constructors:
+
+Interface: Cannot have constructors.
+Abstract Class: Can have constructors.
+Fields:
+
+Interface: Fields are implicitly public, static, and final (constants).
+Abstract Class: Fields can have various access modifiers and can be non-final.
+62) What is the garbage collection concept in Java? Explain.
+Garbage collection in Java is the automatic process of reclaiming memory occupied by objects that are no longer reachable or in use by the program. The Java Virtual Machine (JVM) has a garbage collector that identifies and frees up memory occupied by objects that are no longer needed.
+
+63) How to advise or suggest garbage collection to happen?
+In Java, you can suggest garbage collection by calling the System.gc() method, but it is not guaranteed to trigger garbage collection immediately. The decision to perform garbage collection is ultimately up to the JVM.
+
+64) Explain System.gc().
+System.gc() is a method in Java that suggests to the JVM that it should run the garbage collector. However, it does not guarantee immediate garbage collection. The JVM may choose to ignore the suggestion.
+
+65) What is the use of the finalize method?
+The finalize method is called by the garbage collector before reclaiming the memory occupied by an object. It allows an object to perform cleanup operations or release resources before being garbage collected.
+
+66) What is the difference between final, finally, and finalize?
+final: It is a keyword used to declare variables, methods, or classes.
+finally: It is a block used in exception handling to specify code that will be executed regardless of whether an exception is thrown or not.
+finalize: It is a method in the Object class that is called by the garbage collector before an object is garbage collected. It is used for cleanup operations.
+67) How to read a file in Java? Can you write a program?
+Certainly! Here's a simple Java program to read a file using FileReader and BufferedReader:
+
+java
+Copy code
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadFileExample {
+    public static void main(String[] args) {
+        String filePath = "path/to/your/file.txt";
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+68) How to write a text file in Java? Can you write a program?
+Certainly! Here's a simple Java program to write to a text file using FileWriter and BufferedWriter:
+
+java
+Copy code
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class WriteFileExample {
+    public static void main(String[] args) {
+        String filePath = "path/to/your/output.txt";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write("Hello, this is a sample text.\n");
+            writer.write("Writing to a text file in Java is easy!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+69) What is the difference between FileInputStream and FileOutputStream?
+FileInputStream: Used for reading binary data from a file.
+FileOutputStream: Used for writing binary data to a file.
+70) What is a stream in Java? Can you define it?
+A stream in Java is a sequence of data elements that supports sequential and parallel processing. It is a flow of data from a source to a destination, where data can be read from or written to.
+
+71) What are the types of streams? Explain character and byte streams.
+Byte Streams: Handle input and output of raw binary data. Examples include FileInputStream and FileOutputStream.
+Character Streams: Handle input and output of characters. Examples include FileReader and FileWriter. Character streams are often more appropriate for handling text.
+72) What is the use of the File class in Java?
+The File class in Java is used to represent the file and directory pathnames. It provides methods for working with files and directories, such as creating, deleting, checking existence, and obtaining information about them.
+
+73) What is serialization?
+Serialization in Java is the process of converting the state of an object into a byte stream. It is used for persisting or transmitting objects. The ObjectOutputStream class is often used for serialization.
+
+74) What is deserialization?
+Deserialization in Java is the process of reconstructing an object from a byte stream. It is the opposite of serialization. The ObjectInputStream class is commonly used for deserialization.
+
+75) What is the difference between an Array and a Collection?
+Array: A fixed-size, homogeneous data structure where elements are stored in contiguous memory locations.
+Collection: A dynamic-size, heterogeneous data structure that represents a group of objects.
+76) What is the difference between ArrayList, Vector, and LinkedList?
+ArrayList: Resizable array implementation, not synchronized.
+Vector: Resizable array similar to ArrayList but synchronized, making it thread-safe.
+LinkedList: Doubly linked list implementation, not synchronized.
+77) What is the difference between ArrayList and HashSet?
+ArrayList: Implements the List interface, allows duplicate elements, and maintains the order of insertion.
+HashSet: Implements the Set interface, does not allow duplicate elements, and does not maintain any order.
+78) What is the difference between List, Set, and Map?
+List: Ordered collection that allows duplicate elements.
+Set: Unordered collection that does not allow duplicate elements.
+Map: Collection of key-value pairs, where each key is associated with exactly one value.
+79) Can you iterate ArrayList using Iterator? Explain with a program.
+Yes, you can iterate an ArrayList using an Iterator. Here's an example:
+
+java
+Copy code
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IterateArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<String> myList = new ArrayList<>();
+        myList.add("Apple");
+        myList.add("Banana");
+        myList.add("Orange");
+
+        Iterator<String> iterator = myList.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+}
+80) Can you iterate ArrayList using ListIterator? Explain with a program.
+Yes, you can iterate an ArrayList using a ListIterator. Here's an example:
+
+java
+Copy code
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class ListIteratorExample {
+    public static void main(String[] args) {
+        ArrayList<String> myList = new ArrayList<>();
+        myList.add("Apple");
+        myList.add("Banana");
+        myList.add("Orange");
+
+        ListIterator<String> iterator = myList.listIterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+}
+81) Can you iterate ArrayList using for-each? Explain with a program.
+Yes, you can iterate an ArrayList using the for-each loop. Here's an example:
+
+java
+Copy code
+import java.util.ArrayList;
+
+public class ForEachExample {
+    public static void main(String[] args) {
+        ArrayList<String> myList = new ArrayList<>();
+        myList.add("Apple");
+        myList.add("Banana");
+        myList.add("Orange");
+
+        for (String fruit : myList) {
+            System.out.println(fruit);
+        }
+    }
+}
+82) Can you iterate HashMap? Explain with a program.
+Yes, you can iterate a HashMap using the entrySet and for-each loop. Here's an example:
+
+java
+Copy code
+import java.util.HashMap;
+import java.util.Map;
+
+public class IterateHashMapExample {
+    public static void main(String[] args) {
+        HashMap<Integer, String> myMap = new HashMap<>();
+        myMap.put(1, "One");
+        myMap.put(2, "Two");
+        myMap.put(3, "Three");
+
+        for (Map.Entry<Integer, String> entry : myMap.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+    }
+}
+83) What do you know about legacy classes in the collection hierarchy?
+Legacy classes refer to the collection classes in Java that were present before the Java Collections Framework was introduced. Examples include Vector, Hashtable, and Stack. These classes are considered less efficient and less flexible compared to their counterparts in the Collections Framework.
+
+84) What comes under List, then Set, and then Map? Explain each of them.
+List: Ordered collection allowing duplicate elements.
+
+Examples: ArrayList, LinkedList, Vector
+Set: Unordered collection not allowing duplicate elements.
+
+Examples: HashSet, TreeSet
+Map: Collection of key-value pairs.
+
+Examples: HashMap, TreeMap, LinkedHashMap
+85) What is the difference between for-each and for loop? Explain with a program.
+The main difference is that the for-each loop simplifies the iteration process and provides cleaner syntax. Here's an example:
+
+java
+Copy code
+// Using for-each loop
+for (String fruit : myList) {
+    System.out.println(fruit);
+}
+
+// Using traditional for loop
+for (int i = 0; i < myList.size(); i++) {
+    System.out.println(myList.get(i));
+}
+86) What is the difference between Iterator and ListIterator?
+Iterator: Works for all collections, allows forward iteration only, and does not provide methods for adding or modifying elements during iteration.
+ListIterator: Specifically designed for lists, allows bidirectional iteration, and provides methods for adding, modifying, and obtaining the index of elements during iteration.
+87) What is the difference between Collection and Collections?
+Collection: Represents a group of objects, such as a List, Set, or Map.
+Collections: A utility class in Java that provides static methods for manipulating and operating on objects of type Collection. It is not a collection itself.
+88) What is the difference between TreeSet, HashSet, and LinkedHashSet?
+TreeSet: Implements a sorted set using a tree structure. Elements are stored in natural order or by a specified comparator.
+HashSet: Implements an unordered set using a hash table. It does not allow duplicate elements.
+LinkedHashSet: Maintains the insertion order of elements, with faster iteration than TreeSet.
+
+89) What is the difference between HashMap, TreeMap, LinkedHashMap, and Hashtable?
+Answer:
+HashMap: It does not maintain any order. It allows one null key and multiple null values. It is not synchronized.
+TreeMap: It maintains natural ordering of keys or can be customized using a comparator. It does not allow null keys and allows multiple null values.
+LinkedHashMap: It maintains the insertion order. It allows one null key and multiple null values.
+Hashtable: It is similar to HashMap but is synchronized. It does not allow null keys or values.
+90) What are generics in collection?
+Answer:
+Generics in collections allow the use of parameterized types to provide compile-time type safety. It enables the definition of classes, interfaces, and methods with a placeholder for the data type that is specified when the code is used.
+91) What is a runtime exception and compile-time exceptions?
+Answer:
+Runtime Exception: Exceptions that occur during the execution of the program are runtime exceptions. They are unchecked and do not need to be declared in the method signature.
+Compile-time Exception: Exceptions that are checked at compile-time are compile-time exceptions. They must be declared in the method signature or handled using try-catch.
+92) What is a checked exception and an unchecked exception?
+Answer:
+Checked Exception: Exceptions that are checked at compile-time are checked exceptions. They extend the Exception class (excluding RuntimeException and its subclasses).
+Unchecked Exception: Exceptions that are not checked at compile-time are unchecked exceptions. They extend the RuntimeException class.
+93) Give me examples of compile-time exceptions.
+Answer:
+Examples of compile-time exceptions include IOException, ClassNotFoundException, and SQLException.
+94) Give me examples of runtime exceptions.
+Answer:
+Examples of runtime exceptions include ArithmeticException, NullPointerException, and ArrayIndexOutOfBoundsException.
+95) What is the use of the try block?
+Answer:
+The try block is used to enclose a block of code where exceptions might occur. It allows you to handle these exceptions using catch blocks or ensure that certain code gets executed in a finally block.
+96) What is the use of the catch block?
+Answer:
+The catch block is used to handle exceptions thrown in the corresponding try block. It contains code that specifies what to do when a specific exception is caught.
+97) What is the use of the finally block?
+Answer:
+The finally block is used to specify code that should always be executed, whether an exception is thrown or not. It is commonly used for cleanup activities.
+98) Can we write multiple catch blocks for every try block? If yes, then what care do we need to take?
+Answer:
+Yes, multiple catch blocks can be used for a single try block. However, they should be ordered from more specific to more general exceptions to avoid unreachable code.
+99) What is the difference between throw and throws?
+Answer:
+throw: It is used to explicitly throw an exception in a program.
+throws: It is used in method signatures to declare that the method might throw a particular type of exception.
+100) Explain throw and throws each with 3 points?
+throw:
+
+Used to explicitly throw an exception.
+Can be used anywhere in the code to throw a custom or predefined exception.
+The thrown exception must be a subclass of Throwable.
+throws:
+
+Used in method signatures to declare the exceptions that the method might throw.
+Allows the caller to be aware of the exceptions and handle them appropriately.
+Multiple exceptions can be declared using a comma-separated list.
+
+
+101) Do you know any annotation in Java? Please explain at least 2 annotations.
+Answer:
+@Override: This annotation is used to indicate that a method in a subclass is intended to override a method defined in its superclass.
+
+java
+Copy code
+@Override
+public void methodName() {
+    // Method implementation
+}
+@Deprecated: This annotation marks a method, class, or field as deprecated, signaling that it should no longer be used and might be removed in future versions.
+
+java
+Copy code
+@Deprecated
+public void oldMethod() {
+    // Deprecated method implementation
+}
+102) What is the syntax of a one-dimensional array?
+Answer:
+Declaration and Initialization:
+java
+Copy code
+dataType[] arrayName = new dataType[size];
+103) What is the syntax of a two-dimensional array?
+Answer:
+Declaration and Initialization:
+java
+Copy code
+dataType[][] arrayName = new dataType[rowSize][columnSize];
+104) Can you reverse an array? Explain with a program.
+Answer:
+java
+Copy code
+public class ReverseArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        for (int i = 0, j = array.length - 1; i < j; i++, j--) {
+            // Swap elements at positions i and j
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+
+        // Print reversed array
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+}
+105) Can you iterate an array by using a for-each loop? How?
+Answer:
+java
+Copy code
+int[] numbers = {1, 2, 3, 4, 5};
+
+for (int num : numbers) {
+    System.out.println(num);
+}
+106) How to create a String object?
+Answer:
+java
+Copy code
+String str = new String("Hello, World!");
+107) What is the difference between the equals method of the Object class and the String class?
+Answer:
+The equals method in the Object class compares object references for equality.
+The equals method in the String class compares the content of two strings for equality.
+108) What is the difference between == and the equals method of the String class?
+Answer:
+== compares object references for equality.
+equals method in the String class compares the content of two strings for equality.
+109) Tell me 5 methods of the String class and explain each one of them with a program.
+Answer:
+length(): Returns the length of the string.
+
+java
+Copy code
+String str = "Hello";
+int length = str.length();
+System.out.println("Length: " + length);
+charAt(index): Returns the character at the specified index.
+
+java
+Copy code
+char character = str.charAt(2);
+System.out.println("Character at index 2: " + character);
+substring(beginIndex): Returns a substring starting from the specified index.
+
+java
+Copy code
+String substr = str.substring(2);
+System.out.println("Substring from index 2: " + substr);
+toUpperCase(): Converts the string to uppercase.
+
+java
+Copy code
+String upper = str.toUpperCase();
+System.out.println("Uppercase: " + upper);
+toLowerCase(): Converts the string to lowercase.
+
+java
+Copy code
+String lower = str.toLowerCase();
+System.out.println("Lowercase: " + lower);
+
+
+110) What is the string pool concept in Java?
+Answer:
+The string pool in Java is a pool of strings maintained by the Java Virtual Machine (JVM). When a string is created using double quotes, the JVM checks the pool to see if an identical string already exists. If it does, the existing instance is returned, avoiding the creation of a new object. This helps in conserving memory and optimizing performance.
+111) Difference between String, StringBuffer, and StringBuilder.
+Answer:
+String:
+
+Immutable (unchangeable).
+Concatenation creates a new string.
+Thread-safe.
+StringBuffer:
+
+Mutable (changeable).
+Concatenation modifies the existing object.
+Thread-safe (synchronized).
+StringBuilder:
+
+Mutable (changeable).
+Concatenation modifies the existing object.
+Not thread-safe (not synchronized), more efficient in a single-threaded environment.
+112) How to create a simple thread in Java?
+Answer:
+java
+Copy code
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+
+    public static void main(String args[]) {
+        MyThread myThread = new MyThread();
+        myThread.start();
+    }
+}
+113) Define thread?
+Answer:
+A thread in Java represents a lightweight, independent unit of execution. It runs concurrently with other threads, sharing the same resources but having its own execution path. Threads are used to implement multithreading, allowing for better utilization of CPU resources.
+114) What is the difference between thread and process?
+Answer:
+Thread:
+
+Lightweight unit of execution.
+Shares memory space with other threads in the same process.
+Faster to create and terminate.
+Communication between threads is easier.
+Process:
+
+Independent program with its own memory space.
+Slower to create and terminate.
+Communication between processes is more complex.
+115) Can you explain the lifecycle of a Thread?
+Answer:
+New: The thread is in this state before the start() method is called.
+Runnable: The thread is in this state after the start() method is called, and it is ready to run.
+Blocked: The thread is in this state when it is waiting for a monitor lock.
+Waiting: The thread is in this state when it is waiting indefinitely for another thread to perform a particular action.
+Timed Waiting: The thread is in this state when it is waiting for another thread to perform a particular action within a stipulated amount of time.
+Terminated: The thread is in this state when its run() method completes execution.
+116) Can you write statements for JDBC connectivity?
+Answer:
+java
+Copy code
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JDBCExample {
+    public static void main(String[] args) {
+        // JDBC URL, username, and password
+        String url = "jdbc:mysql://localhost:3306/database_name";
+        String username = "username";
+        String password = "password";
+
+        // Establishing the connection
+        try {
+            Connection connection = DriverManager.getConnection(url, username, password);
+            System.out.println("Connected to the database");
+            // Further database operations can be performed here
+            connection.close(); // Close the connection when done
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+117) Can you explain the difference between PreparedStatement and Statement?
+Answer:
+Statement:
+
+Used for executing simple SQL queries without parameters.
+Prone to SQL injection attacks as input is concatenated directly into the query.
+Generally used for executing static SQL queries.
+PreparedStatement:
+
+Used for executing precompiled SQL queries with parameters.
+Helps prevent SQL injection attacks by using parameterized queries.
+Generally used for executing dynamic SQL queries with user input.
+118) Can you explain how to retrieve data from a database in Java? Please explain all steps.
+Answer:
+Load the JDBC driver:
+
+java
+Copy code
+Class.forName("com.mysql.cj.jdbc.Driver");
+Establish a connection:
+
+java
+Copy code
+Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/database_name", "username", "password");
+Create a statement or prepared statement:
+
+java
+Copy code
+Statement statement = connection.createStatement();
+Execute the query and retrieve the result set:
+
+java
+Copy code
+ResultSet resultSet = statement.executeQuery("SELECT * FROM table_name");
+Iterate through the result set:
+
+java
+Copy code
+while (resultSet.next()) {
+    // Retrieve data using resultSet.getXXX() methods
+}
+Close the connection and statement:
+
+java
+Copy code
+resultSet.close();
+statement.close();
+connection.close();
+119) What is SQL?
+Answer:
+SQL (Structured Query Language) is a domain-specific language used for managing and manipulating relational databases. It provides a standard way to interact with databases, allowing users to define, query, and manipulate data.
+120) What is DDL, DML, and DCL?
+Answer:
+DDL (Data Definition Language):
+
+Deals with the structure and schema of the database.
+Includes commands like CREATE, ALTER, DROP.
+DML (Data Manipulation Language):
+
+Deals with the manipulation and retrieval of data.
+Includes commands like SELECT, INSERT, UPDATE, DELETE.
+DCL (Data Control Language):
+
+Deals with the permissions and access control of the database.
+Includes commands like GRANT, REVOKE.
+121) What is RDBMS?
+Answer:
+RDBMS (Relational Database Management System) is a type of database management system that stores data in tables and enforces relationships between the tables. It uses SQL to define and manipulate the data, ensuring data integrity and consistency.
+122) Can you write a SELECT query with a WHERE condition?
+Answer:
+sql
+Copy code
+SELECT column1, column2 FROM table_name WHERE condition;
+123) Can you write an UPDATE query with a WHERE condition?
+Answer:
+sql
+Copy code
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
+124) Can you write a DELETE query with a WHERE condition?
+Answer:
+sql
+Copy code
+DELETE FROM table_name WHERE condition;
+125) Can you write an INSERT query?
+Answer:
+sql
+Copy code
+INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);
+126) What is a Primary Key?
+Answer:
+A primary key is a unique identifier for a record in a database table. It must contain unique values, and a table can have only one primary key. It is used to ensure the integrity and uniqueness of each record in the table.
+127) What is a Foreign Key?
+Answer:
+A foreign key is a column or a set of columns in a table that refers to the primary key of another table. It establishes a link between the two tables and is used to enforce referential integrity in a relational database.
+128) Can you explain memory management in Java?
+Answer:
+Memory management in Java is handled by the Java Virtual Machine (JVM). The JVM automatically allocates and deallocates memory for objects.
+Java uses garbage collection to automatically reclaim memory occupied by objects that are no longer in use.
+The java.lang.OutOfMemoryError exception may occur if the JVM runs out of memory, often due to memory leaks or insufficient heap size.
+Developers can influence memory management by controlling the object lifecycle and optimizing memory usage in their code. Using tools like profilers can help identify memory-related issues.

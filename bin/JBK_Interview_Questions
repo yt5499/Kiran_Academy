@@ -1,0 +1,157 @@
+1)What all datatypes you know in java?
+2)Can you give size required for each datatype?
+3)What is default value of byte short int float long double boolean char
+4)Is string datatype?
+5)Can you define class?
+6)Can you define Object?
+7)Can you list out some in built classes in java?
+8)What is difference between global and local variable?
+tell me any 3 to 4 differences.
+9) Can class be a return type of any method?
+10) What is block in java? What is its syntax? When is it getting executed?
+11) What is super class of all classes in java?
+12) Do you know some methods in Object class ? Can you name some of them?
+13) What is package and import keyword?
+14) Can we give fully qualified class name instead of importing that class?
+If yes how to do that?
+15) What are access modifiers / access specifiers available in java?
+Explain each of them in details?
+16) Can you elaborate protected access specifier in java?
+17) What is encapsulation? explain in brief?
+18) Why global variables are recommended to be private?
+19) Can you give me any real time example of encapsulation?
+20) Explain Inheritance briefly.
+21) Give real time example of Inheritance.
+22) What are types of inheritance?
+23) Can you explain advantages of Inheritance?
+24) Why multiple Inheritance not supported in case of classes but in case of interfaces?
+25) What is multilevel inheritance?
+26) What is dynamic dispatch?
+27) Can we assign subclass to super class and what will happen if we do that? At coompile time and runtime?
+28) Can private variables or methods inherit?
+29) Explain super keyword and its syntax?
+30) Explain this keyword and its syntax?
+31) Do you know rule for writing super(),this() in a program?
+32) What is constructor in java
+33) Can we call one constructor from another constructor?
+34) What will happen if we make constructor private?
+35) What are the ways to call constructors?
+36) How many constructors we can have in a program? If more than one allowed
+What care we need to take?
+37) Define polymorphism?
+38) Give real time example of polymorphism.
+39) What is method overloading ? explain in detail all rules.
+40) What is method overriding ? explain in detail all rules
+41) What is @Override annotation?
+42) Can we override static method?
+43) Can we override constructors?
+44) Can we override final methods?
+45) Can constructor be overloaded?
+46) What is static keyword in java
+47) Can local variable be static?
+48) What is difference between instance variable and static variables?
+49) Do you know static block in java? When is it getting executed?
+50) Can constructor be static?
+51) Can we call static method and variables with object? Why it’s not preferrable?
+52) What is final keyword in java?
+53) What will happen if class is final?
+54) What will happen if method is final?
+55) What will happen if variable is final?
+56) Can local variable be final?
+57) What is abstraction in java.
+58) How to achieve abstraction? Explain in detail?
+59) Can you explain interface at least 4 points about it?
+60) Can you explain abstract class at least 4 points about it?
+61) Can you list out difference between interface and abstract class in java? at least 4.
+62) What is garbage collection concept in java? Explain.
+63) How to advise or suggest garbage collection to happen?
+64) Explain System.gc().
+65) What is use of finalize method?
+66) What is difference between final , finally and finalize?
+67) How to read file in java? Can you write a program?
+68) How to write text file in java? Can you write a program?
+69) What is difference between fileinputstream and fileoutputstream?
+70) What is stream in java? Can you define?
+71) What are types of streams ? explain character and byte stream?
+72) What is use of File class in java?
+73) What is serialization?
+74) What is deserialization?
+75) What is difference between Array and Collection?
+76) What is difference between Arraylist and Vector and LinkedList?
+77) What is difference between ArrayList and HashSet?
+78) What is difference between List , Set and Map?
+79) Can u iterate arraylist by using Iterator? Explain in with program.
+80) Can u iterate arraylist by using ListIterator? Explain in with program.
+81) Can u iterate arraylist by using for each? Explain in with program.
+82) Can u iterate HashMap ? Explain in with program.
+83) What u know about legacy classes in collection hierarchy?
+84) What comes under list then set and then map explain each of them?
+85) What is difference for each and for loop? Explain in with program.
+86) What is difference iterator and ListIterator?
+87) What is difference between Collection and Collections?
+88) What is difference between TreeSet , HashSet and LinkedHashSet
+89) What is difference between HashMap, Treemap, LinkedhashMap, Hashtable
+90) What are generics in collection?
+91) What is runtime exception and compile time exceptions?
+92) What is checked Exception and unchecked exception?
+93) Give me examples of compile time exceptions.
+94) Give me examples of run time exceptions.
+95) What is use of try block?
+96) What is use of catch block?
+97) What is use of finally block?
+98) Can we write multiple catch blocks for every try block?
+If yes, then what care we need to take?
+99) What is difference between throw and throws?
+100)Explain throw and throws each with 3 points?
+101)Do you know any annotation in java? Please explain at least 2 annotations.
+102)What is a syntax of one dimensional array?
+103)What is a syntax of two dimensional array?
+104)Can you reverse an array ? explain with program.
+105)Can you iterate array by using for each loop? How?
+106)How to create a String object?
+107)What is difference between equals method of object class and String class?
+108)What is difference between == and equals method of String class?
+109)Tell me 5 methods of String class and explain each one of them with program?
+110)What is string pool concept in java?
+111)Difference between String StringBuffer and the StringBuilder.
+112)How to create a simple thread in java?
+113)Define thread?
+114)What is difference between thread and process?
+115)Can you explain lifecycle of Thread?
+116)Can you write statements for jdbc connectivity?
+117)Can you explain difference between preparedstatement and statement?
+118)Can you explain How to retrieve data from database in java. Please explain all steps.
+119)What is SQL?
+120)What is DDL , DML and DCL?
+121)What is RDBMS?
+122)Can you write select query with where condition?
+123)Can you write update query with where condition?
+124)Can you write delete query with where condition?
+125)Can you write insert query?
+126)What is primary Key?
+127)What is foreign Key?
+128)Can you explain memory management in java?
+
+
+Programs:
+1) Write a program to find prime number.
+2) Write a program for finding factorial of a number?
+3) Write a program for Fibonacci series
+4) Write a program for Armstrong number
+5) Write a program for sum of digits 123 - 6
+6) Write a program for reverse a number 123 -- 321
+7) Write a program for writing any digit in word
+8) Write a program for 240 - two four zero
+9) Write a program to generate any pattern of your wish.
+10) How to reverse a String in Java?
+11) How to swap two numbers without using a third variable?
+12) Java Program to check if a vowel is present in the string?
+13) Java Program to check if number is Palindrome Check?
+14) How to remove Whitespaces from String
+15) Sorting an array in Java?
+16) Sum of all elements in integer array?
+17) Find largest number in an array?
+18) Find second largest number in an array?
+19) How to get distinct characters and their count in a String?
+20) Java Program to print the smallest element in an array
+21) Java Program to print the elements of an array present on odd position

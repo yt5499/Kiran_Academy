@@ -115,6 +115,10 @@ October 5::
 
 October 06
 IB- Instance block
+also known as:
+IIB- Instance Initializing Block
+
+Instance == Object
 
 1. IB is optional
 2. we can write n number of ib's in the class
@@ -127,9 +131,11 @@ IB- Instance block
 
 October 7
 SB- Static Block
+
+Common for all objects
 1. SB is optional
 2. we can write n number of SB's in the class
-3. the SB gets called every time when instance is created
+3. the SB gets called only once when the class is loaded into the jvm memory.
 4. In case of multiple SB's top - down sequence is followed 
 5. When class is loaded into memory, SB gets called/executed
 6. In case of multiple SBs, ALL  SB value will be called
@@ -152,18 +158,21 @@ Types of constructors:
 The default constructor is written/provided by the system IF and ONLY IF developer has NOT defined any constructor in the class
 
 The default constructor has NO parameters
-
-
------
 The developer can NOT define/edit/see default constructor.
 We can define multiple constructors in the class with the unique signatures.
 The priority flows like SB -> IB -> Constructor.
 The constructor should be called 'n' times to create 'n' objects.
 
 
+October 10:
+* Inheritance(Day 1):-
+	- It is act of re-using pre-existing class to create new classes.
+	- Re-usability --> Save time and efforts. 
+
 
 October 11:
-Inheritance(Day 2) - It is process of creating new class(Sub/Child Class) extending pre-existing class(Super/Parent Class), where extended class 
+Inheritance(Day 2)::
+	It is process of creating new class(Sub/Child Class) extending pre-existing class(Super/Parent Class), where extended class 
 	access all properties of Super-Class.
 	
 1. The final keyword stops the inheritance
