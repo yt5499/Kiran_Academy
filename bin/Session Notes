@@ -316,30 +316,49 @@ November 6
 	1. All methods in this class are NOT synchronized(At a time)
 	2. Thread-Unsafe
 	3. Faster in execution
+	
 
 
-
-
+November 20::
+Garbage Collection in Java:
+	* Java's feature: Garbage collection;
+	* Garbage = Un-used data/orphan object.
+	* Garbage collection = To clean the used memory by an un-used data.
+	* JVM track or monitors the memory.
+	* Garbage collection is performed by JVM it-self.
+	* Orphan object = The object with no reference.
+	* Important Questions:
+		1. What is Orphan object?
+		2. Explain final, finally & finalize.
+	* Garbage collection defination:
+		- This is the concept used for cleaning up the memory.
+		- It's not guaranteed.
+		- We need to advice JVM by calling "gc()" method of system class "System.gc()".
+		- It is expected from developers to make objects unclaimed so that "gc()" will clean it up.
+		- Before running gc's "finalize" method of "object" class will be called if you write something there than code will
+		  be executed.
+		  
+	* Sample Code:
+		- public class Car{
+			public String Name;
+		  	public static void main(){
+		  		Car obj = new Car();
+		  		System.out.println(obj.name="WagonR");
+		  			//output:	WagonR
+		  		
+		  		//here we are making object un-used/un-link from reference
+		  		obj = null;
+		  		System.out.println(obj);
+		  			//output:	no reference
+		  		
+		  		System.gc();	//optional
+		  	}
+		  }	
 
 
 
 IMPORTANT Points::
 	- final variable = constant
 	- static & final variable = pure constant
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
