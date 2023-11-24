@@ -356,6 +356,32 @@ Garbage Collection in Java:
 		  }	
 
 
+November 23::
+* Serialization:
+	Q. What is serialization?
+	A. Serialization == Writing(Saving) an object into a file.
+		De-serialization == Reading(Copying) an object from the file.
+	
+	Q. Why to use serialization?
+	A. 1- If there exists a time gap between creation of object & its usage, then we use concept of serialization for memory management.
+	   2- For easy transfer/travel.
+	   		e.g.- if there are 100 objects then,
+	   				100 Objects --> File --> Then send that ONE file with 100 objects.
+	   				
+	* Classes involved in Serialization process:
+		- FileOutputStream -- This class can write(output) a file.
+		- ObjectOutputStream -- This class can write(output) an object.
+	
+	* Classes involved in De-serialization process:
+		- FileInputStream -- This class can read(input) a file.
+		- ObjectInputStream -- This class can read(input) an object.
+		
+	Q. What is transient Keyword?
+	A. If we don not want to save any irrelevant variable in a file then just write "transient" keyword before variable name.
+		e.g.-	public transient int RollNumber;
+
+
+
 
 IMPORTANT Points::
 	- final variable = constant
