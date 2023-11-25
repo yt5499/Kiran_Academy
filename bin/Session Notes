@@ -382,6 +382,117 @@ November 23::
 
 
 
+November 23 & 24::
+* Exception Handling in java-
+	Q. What is Exception?
+	A. The problem occured during execution or when problem has thrown the exception.
+	
+	Q. What is Exception Handling?
+	A. To tackle the runtime problem in the code.
+	
+	Q. Why to use exception handling?
+	A. To avoid runtime problem, we MUST handle the exception.
+	
+* Following are the imp keywords in exception handling
+	Comes with the block {
+		try, catch & finally.
+	}
+	Simple keywords - throw & throws.
+	
+* Sequence of classes
+	Throwable class --> Exception class --> n number of in-built classes.
+	
+* Types of exception:
+	1. Compile time exception(Checked Exception):
+		- The exception that gets detected after the code compilation.
+	2. Runtime exception(Unchecked Exception):
+		- The exception that gets detected during the execution. 
+
+* Blocks:
+	1. try block:
+		- The risky code.
+		- The code that might throw exception.
+	2. catch block:
+		- Backup functionality.
+		- When try block fails to execute.
+	3. finally block:
+		- The code to execute by default.
+		
+* Valid combinations:(finally should be used only once)
+	+ try-catch;
+	+ try-catch-finally;
+	+ try-catch-catch-catch-.......-catch;
+	+ try-catch-catch-catch-.......-catch-finally;
+	+ try-finally;
+
+* Invalid combinations:
+	+ try;
+	+ catch;
+	+ finally;
+	+ catch-finally;
+	+ catch-catch-catch-.......-catch-finally;
+	+ try-finally-catch;
+	+ try-finally-finally;
+	
+* Example:
+	main{
+		250 LOC;
+		//this code will contain multiple exception;
+	}
+	Therefore: If try block contain some code which can throw different types of exceptions, then in order to handle them
+			   differently we MUST have different catch blocks.
+			   
+* "throw" keyword:
+	- The throw keyword is used to EXPLICITLY/FORCEFULLY throw the exception in the program.
+	- If we want to re-direct the control to any specific catch block, then we use "throw" keyword by creating object of "Exception"  
+	  class in try block. 
+	  e.g.- Exception e = new Exception();
+	  		e.throw;
+	  		
+* "throws" keyword:
+	- Using throws keyword, the developer informs the JVM about upcoming exception in the block.
+	- We can skip try-catch block if we are writing throws keyword in signature of method.
+	- How JVM handles the exception is, it simple prints entire stack trace onto the console. 
+	
+	
+November 25::
+* Collection Framework in Java-
+	- Introduction to Collection Framework
+	- Collection Framework Hirarchy
+	- Set Interface --> HashSet Class
+	
+	Q. What is collection framework
+	A. It is group or set of n number of in-built classes, interfaces & methods.
+	
+	Q. Why to use these? Or Advantages of Collection Framework.
+	A. 1. To reduce LOC- as we have any in-built methods.
+	   2. Increases readability.
+	   3. NO limitation on datatype.
+	   4. NO limitation on size/length.
+	   
+	Q. When to use these?
+	A. When we need to store multiple values of DIFFERENT TYPES we MUST use collection framework.
+	
+* Drawbacks of Array:
+	- Limitation on datatype.
+	- Limitation on size/length.
+	
+* Drawbacks of Array OVERCOMED in Collection Framework:
+	- NO limitation on datatype.
+	- NO limitation on size/length.
+	
+* Hirarchy of Collection Framework
+	- Itarable(interface- which consists of abstract methods) --> Collection(interface, implements Iterable) -->
+		Set, Queue, List, Map, etc (all are interface, implements Collection)
+		
+	- Set: Stores unique values at random index.
+	
+	- In that,
+	- HashSet(class implements Set)
+	
+	 
+
+
 
 IMPORTANT Points::
 	- final variable = constant
