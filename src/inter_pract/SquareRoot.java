@@ -18,7 +18,6 @@ public class SquareRoot {
 			temp=a;
 			a=((n/temp+temp)/2);
 		}
-		
 		System.out.println(a);
 		
 	}
