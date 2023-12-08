@@ -496,6 +496,14 @@ queue interface --> linkedlist class;
 	
 	 
 
+December 7::
+Threads:
+
+Process(Main program)--> Dividing process in multiple sub-processes(Threads).
+
+e.g.-
+Car racing game --> Has multiple sub-processes also known as "threads" like as Fuel, Map, Car_Life, Score etc.
+
 
 
 IMPORTANT Points::
