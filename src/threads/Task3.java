@@ -5,8 +5,13 @@ package threads;
 public class Task3 extends Thread{
 	@Override
 	public void run() {
-		for(int i=101 ; i<=105 ; i++) {
-			System.out.println(i);			
+		try {
+			for(int i=21 ; i<=30 ; i++) {
+				System.out.println(i);
+				Thread.sleep(1000);
+			}			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 }
