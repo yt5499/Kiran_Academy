@@ -504,10 +504,148 @@ Process(Main program)--> Dividing process in multiple sub-processes(Threads).
 e.g.-
 Car racing game --> Has multiple sub-processes also known as "threads" like as Fuel, Map, Car_Life, Score etc.
 
+December 9::
+* Collection Framework Revisit:-
+
+* Difference between "Array" and "Collection Framework"
+
+* Arrays-
+	1. It can store primitive and non-primitive type of data.
+	2. It can store only homogeneous(same) type of data.
+	3. Array size is fixed, we cannot increase or decrease the size of array at RUNTIME.
+	4.Arrays are inbuilt features of java & thus we have to develop algorithms(our own logic).  
+
+* Collection Framework-
+	1. It can store only non-primitive type of data.
+	2. It can store hetrogeneous(different) type of data.
+	3. We can increase or decrease the size of COLLECTIONS at RUNTIME.
+	4. CF is an API which provides pre-defined classes, methods & interfaces.
+	
+* Data structure-
+	- It is a way to store data into a memory in an efficient way(time and space).
+	- Types of Data Structures-
+		1. Primitive DS:-
+			- Here we can only store one value in single entity.
+				e.g.- int a=10;
+			e.g.-
+				short, byte, int, long, float, double, char, boolean.
+					- This are used for basic projects like as- Calculator,currency converter etc.
+		2. Non-primitive DS:-
+			- Here we can store multiple values in single entity
+				e.g.- String s = "Hello"(collection of characters)
+			i. Linear DS:-
+				String, array, list, set, queue, Arraylist, ll etc.
+			ii. Non-linear DS:-
+				Graph, Tree.
+				
+
+* Collection:-
+	- It is an interface which is present in "java.util" package (from v1.2)
+	- Syntax:
+		public interface Collection<E> extends Iterable<E>		...<E> is known as Generics
+	- Methods of Collection interface:-
+		- public boolean add(object obj)
+		- public boolean addall(collection c)
+		- public boolean remove(object obj)
+		- public boolean removeall(collection c)
+			- will remove same element from one collection present in another.
+		- void clear()
+		- boolean contains(object obj)
+		- boolean containsAll(collection c)
+		- boolean isEmpty()
+		- int size()
+		- Iterator iterator()
+		
+		
+* Collection Framework:-
+	- Collection(Interface): It is single entity or object to store multiple data/values
+	- Framework: Represents library(in-built classes, interfaces and methods)
+	- Collections(Utility Class): It contains only static methods.
+	1. Collection Framework: 
+		- It is set of predefined classes & interfaces which is used to store multiple data.
+	2. It contains two main parts
+		- java.util.Collection;
+		- java.util.Map;
+		
+* Hirarchy:
+	Collection(i)-->(List(i)-->ArrayList(c),LinkedList(c),(Vector(LC))-->Stack(LC)),
+					(Set(i)-->(HashSet(c)-->LinkedHasSet(c)),SortedSet(c)),
+					(Queue(i)-->PriorityQueue(c),(Deque(i)--ArrayDeque(c)))
+		- For this we create collection object
+			e.g.- ArrayList al = new ArrayList();
+		- It stores only objects.
+					
+	Map(i)-->((HashMap(c)-->LinkedHashMap(c)),SortedMap(c),HashTable)
+		- For this we create map object
+			e.g.- HashMap map = new HashMap();
+		- It stores Key-Value pairs.
+	
+	- This both things make "Collection Framework";
+	
+	
+* We can create object of Class by giving reference of Interface-
+	- e.g. List(interface) & ArrayList(class)
+		List l=new ArrayList();
+		
+
+* Cursors in Collection:
+	1. Iterator
+	2. ListIterator
+	3. Enumeration			...(Different than adv. concept Enum)
+	
+* Difference between iterator and listiterator
+	- Iterator:
+		1. We can get Iterator cursor by "iterator()" method.
+			i.e. Iterator itr(reference)=l(List reference).iterator();
+		2. Iterator cursor can be used with any collection object.
+		3. Iterator methods are:
+			hasNext(), next(), remove()
+		4. By using iterator cursor, we can retrieve the elements only in FORWARD direction.
+		5. By using iterator cursor, we can read and remove the elements.
+		
+	- ListIterator:
+		1. We can get ListIterator cursor by "ListIterator()" method.
+			i.e. ListIterator litr=l.listIterator();
+		2. ListIterator cursor can be used only with List implemented Classes.
+		3. ListIterator methods are:
+			hasNext(), next(), hasPreious(), previous(), remove(), set()
+		4. By using ListItertor cursor, we can retrieve the elements in FORWARD & BACKWARD directions.
+		5. By using ListItertor cursor, we can read, remove, replace & add the elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 IMPORTANT Points::
 	- final variable = constant
 	- static & final variable = pure constant
+	- when interface INHERIT interface the term used is "EXTEND"
+	  and when class INHERIT interface the term used is "IMPLEMENTS"
 
 
