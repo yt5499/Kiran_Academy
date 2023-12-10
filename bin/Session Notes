@@ -611,9 +611,163 @@ December 9::
 			hasNext(), next(), hasPreious(), previous(), remove(), set()
 		4. By using ListItertor cursor, we can retrieve the elements in FORWARD & BACKWARD directions.
 		5. By using ListItertor cursor, we can read, remove, replace & add the elements.
+		
+December 10:: ...continued
+
+* Enumeration-
+	- It is cursor which is used to retrieve collection objects one by one.
+	- It was introduced in JDK v1.0.
+	- It can be used only with legacy classes(lc) i.e. Vector & Stack.
+	- We can get it by "elements()" method
+		i.e. Enumeration e = v.elements();
+	- Methods of enumeration:
+		hasMoreElements(), nextElement()
+	- It can be used to retrieve the elements only in FORWARD direction.
+	- We can only perform read operations.
+	
+	
+* Difference between List interface & Set interface:
+	1. List:
+		- It is index based DS.
+		- It can store duplicate elements.
+		- It can store any number of null values.
+		- It follows insertion order.
+		- In list we can iterate(get) elements by iterator & ListIterator both. 
+	
+	2. Set:
+		- Set is not an index based DS. It stores the data according to the "HashCode values".
+		- Set does not allows to store duplicate values. We can only store "Uniques".
+		- It can store only one null value.
+		- It does not follows insertion order.
+		- We can iterate the set elements by only Iterator.
+	
+	
+	
+
+* ArrayList
+	- ArrayList(class) which implements List(interface) present in java.util package.
+	- ArrayList is created on the basis of "Re-sizable ARRAY".
+
+	* Properties of Arraylist:
+		1. They are index based DS as array.
+		2. They can store different type of data or hetrogeneous data-types.
+		3. They can store duplicates.
+		4. They can store any number of null values.
+		5. They follow insertion order.
+		6. They does not follows the sorting order.
+		7. ArrayList are "non-synchronized" collection.
+			i.e. Multiple threads are executed at a time.
+			     - Parallel execution.
+			     - Not thread safe.
+			     - No data consistency.
+			
+
+* LinkedList:
+	- LinkedList is an implemented class of List interface which is present in "java.util" package.
+	- The underline data-structure of LinkedList is
+		+ Doubly LinkedList:
+			- Here First and last nodes are not connected.
+		+ Circular LinkedList
+			- Here First and last nodes are connected.
+		
+		- Here node consists: 
+			previous node address || Element || next node address
+
+	* Advantages of LinkedList(Doubly & Circular):
+		- Process of insertion & deletion becomes efficient and fast.
+		- We can traverse the List in forward and backward directions both.
+		
+	* Dis-advantages of LinkedList(Doubly & Circular):
+		- It occupies extra space for "previous node address".
+		- In case of insertion & deletion of element in between, we have to manage previous and next node.
+		
+	* Properties of LinkedList:
+		1. They are index based DS as array.
+		2. They can store different type of data or hetrogeneous data-types.
+		3. They can store duplicates.
+		4. They can store any number of null values.
+		5. They follow insertion order.
+		6. They does not follows the sorting order.
+		7. LinkedList are "non-synchronized" collection.
+			i.e. Multiple threads are executed at a time.
+			     - Parallel execution.
+			     - Not thread safe.
+			     - No data consistency.
 
 
+* Difference between ArrayList & LinkedList:
+	- ArrayList:
+		1. They acts as a List.
+		2. The underline DS of ArrayList is "re-sizable" array.
+		3. Elements are stored in contiguous memory locations.
+		4. ArrayList are good at retrieval(to get values from DS) operations.
+		5. ArrayList are worst at insertion & deletion operations.
+	
+	- LinkedList:
+		1. They acts as a List as well as Deque.
+		2. The underline DS of LinkedList is "Doubly LL" & "Circular LL".
+		3. Elements are not stored(as after & before elements there are previous and next) in contiguous memory locations.
+		4. LinkedLists are good at insertion & deletion operations.
+		5. LinkedLists are worst at retrieval operations.
+		
 
+* JDK v1.0
+	- In this version java provided classes and interfaces in which we can store the data/objects.
+	  e.g. Vector, Stack, HashTable, Properties, Dictionary
+* JDK v1.2
+	- In this version collection framework was introduced.
+	
+	* Legacy Classes:
+		- Some classes i.e. Vector, Stack, HashTable etc were introduced in JDK v1.0, but when collection framework was introduced in v1.2
+		  these classes were "modified" or say "re-engineered" so that they can be adjusted in new collection hierarchy, so these older
+		  classes are known as legacy classes.
+		  
+
+* Vector:
+	- It is an implemented class of List interface which is present in "java.util" package.
+	- The underline DS of vector is "re-sizable array".
+	
+	* Properties of Vector:
+		1. They are index based DS as array.
+		2. They can store different type of data or hetrogeneous data-types.
+		3. They can store duplicates.
+		4. They can store any number of null values.
+		5. They follow insertion order.
+		6. They does not follows the sorting order.
+		7. LinkedList are "Synchronized" collection.
+			i.e. Multiple threads are executed at a time.
+			     - One-by-one execution.
+			     - Thread safe.
+			     - Data consistency.
+			     
+	* Methods of Vector class:
+		- addElement(obj), firstElement(), lastElement(), removeElement(obj), removeElementAt(int index), removeAllElements()
+		  capacity()
+		  
+
+* Difference between ArrayList and Vector:
+	- ArrayList:
+		1. It was introduced in JDK v1.2.
+		2. It is not a legacy class.
+		3. It is Non-synchronized collection.
+		4. It is thread unsafe.
+		5. Here application speed is fast(becoz of Non-synchronized thread).
+		6. It does not guarantee for data consistency.
+		7. Here, initial/default capacity is 10, and
+		   new capacity = (old capacity * 3)/2 + 1;
+		8. It does not provide any method to find capacity.  
+	
+	- Vector:
+		1. It was introduced in JDK v1.0.
+		2. It is a legacy class.
+		3. It is a Synchronized collection.
+		4. It is thread safe.
+		5. Here application speed is slow(becoz of synchronized thread).
+		6. It guarantee for data consistency.
+		7. Here, initial/default capacity is 10, and
+		   new capacity = (old capacity * 2);
+		8. It provide a method 
+		   i.e. "int capacity()" to find capacity.
 
 
 
@@ -647,5 +801,6 @@ IMPORTANT Points::
 	- static & final variable = pure constant
 	- when interface INHERIT interface the term used is "EXTEND"
 	  and when class INHERIT interface the term used is "IMPLEMENTS"
+	- All "Legacy Classes" are Thread Synchronized.
 
 
