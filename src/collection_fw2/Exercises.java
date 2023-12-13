@@ -6,24 +6,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class Exercises {
-
 	public static void main(String[] args) {
-		
-		ArrayList al = new ArrayList();
-		al.add(54);
-		al.add("Arraylist");
-		al.add(55.5);
-		System.out.println(al);
-		
-		System.out.println("---------------------------");
-		
-		Iterator itr = al.iterator();
-		while(itr.hasNext()) {
-			System.out.println(itr.next());
-		}
-		
-
-		
+		System.out.println("Hello");
 	}
-
 }

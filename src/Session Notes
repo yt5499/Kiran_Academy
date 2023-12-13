@@ -1,4 +1,4 @@
-NOTES
+NOTES on CORE-JAVA
 
 6/09/2023
 
@@ -122,8 +122,8 @@ Instance == Object
 
 1. IB is optional
 2. we can write n number of ib's in the class
-3. the ib gets called everytime when instance is created
-4. In case of multiple IB's top - down sequence is follwed 
+3. The IB gets called everytime when instance is created.
+4. In case of multiple IB's top - down sequence is followed. 
 5. In case of multiple IB's ALL IB's will be called for all objects
 6. In case of multiple IBs, last IB value set is mainted
 7. The nested IBs are not allowed
@@ -141,7 +141,7 @@ Common for all objects
 6. In case of multiple SBs, ALL  SB value will be called
 7. The nested SBs are not allowed
 8. We can write n number of lines of code in SB
-9. SB can acccess ONLY static variables
+9. SB can access ONLY static variables
 10. The IB can access BOTH static as well as non-static variables
 
 
@@ -236,7 +236,7 @@ October 16:
 October 17:
 1. Abstract = incomplete
 2. The interface is NOT a class.
-3. The interface is collection abstract methods and public static and final variables.
+3. The interface is collection of "abstract methods" and "public static and final" variables.
 4. We can NOT instantiate the interface. Means we can NOT create object of interface.
 5. We can implement the interface in 'n' number of classes.
 6. The class which implements the interface MUST define the abstract methods interface.
@@ -292,7 +292,7 @@ November 3
 2. String pool:
 	--> It is dedicated memory for storing all string values ONLY.
 	* It supports memory utilization.
-	* Immutable = permanent = constant = unchangable 
+	* Immutable = permanent = constant = un-changable 
 3. Declaring string in two ways
 	1) String str = "Hello";				**Recommended way for creating string**
 	2) String str = new String("Hello")
@@ -827,7 +827,81 @@ December 10:: ...continued
 		7. It is Non-synchronized collection/DS.
 
 
+* Map interface:
+	- Map is interface which is present in "java.util" package.
+	-*Map does not inherit collection interface.
+	- Map was introduced in JDK v1.2
+	
+	* Properties of Map:
+		1. Map stores the data in "Key-Value" pair which is known as "Entry".
+		2. In Map, Key should be unique, but value can be duplicate.
+		3. In Map, we can store maximum one Null in Key, but in values we can store any number of nulls.
+		4. Map does not follow the Sorting & Insertion order.
 
+
+* HashMap:
+	- It is an implemented class of Map interface and present in "java.util" package.
+	- It was introduced in JDK v1.2.
+	- It's underline DS is:
+		- HashTable
+		
+	* Properties of HashMap:
+		1. HashMap stores the value in "Key-Value" pair. Each key-value pair is known as "Entry".
+		2. In HashMap keys must be unique, but values can be duplicate.
+		3. HashMap contains Maximum one null in Key and multiple nulls in Values.
+		4. HashMap can store hetrogeneous elements.
+		5. HashMap does not follow sorting and insertion order.
+		6. HashMap is Non-synchronized DS.
+		
+		
+* TreeMap:
+	- It is an implemented class of NavigableMap and indirectly of SortedMap and Map interface.
+	- It is in "java.util" package.
+	- It was introduced in JDK v1.2.
+	- TreeMap's underline DS is:
+		- Red-Black tree
+			* Properties of "Red-Black" tree
+				- Every node is either red or black.
+				- The root node is always black.
+				- Every leaf node(which is NULL) should be black.
+				- If node is red, then both its children must be black.
+				- For each node, all paths from the node to its descendant leaf nodes contains the same
+				  number of black nodes.
+				  
+	* Properties of TreeMap:
+		1. It stores data in key-value pair where key must be unique and values can contain duplicates.
+		2. It does not follows insertion order but it follows "Sorting" order with respect to "Keys".
+		3. It can store homogeneous(if you want to use default sorting nature of TreeMap) as well as 
+		   hetrogeneous(if you want to sort by yourself) elements.
+		4. TreeMap cannot store null values.
+		5. TreeMap is Non-synchronized DS.
+		
+	
+* HashTable:
+	- It is implemented class of Map interface.
+	- It is a Legacy Class introduced in JDK v1.0.
+	- It is present in "java.util" package.
+	- It's underline DS is:
+		- HashTable
+		
+	* Properties of HashTable:
+		1. It stores data in key-value pair where key must be unique and values can contain duplicates.
+		2. It does not follows insertion and sorting order.
+		3. It can store homogeneous as well as hetrogeneous elements.
+		4. HashTable cannot store null values.
+		5. HashTable is Synchronized DS.
+		
+	* Working of HashTable:
+		- When we create object of HashTable it create a table like structure with  initial capacity of "11" buckets.
+		  e.g. HashTable obj = new HashTable();
+		- It store values after performing Modulas(%11) operation on key
+		  e.g. 102 = "Home", then 102%11=3
+		  	value will be stored at 3rd location.
+		- Hash-Collision is the situation when multiple data shares the same indices/index values.
+			- When this situation is occured, linked-list comes into existence it forms a linked-list
+			  to the same index value.
+		- It follows Top-Down & Right-Left approach while RETRIEVING(getting) data.
+	
 
 
 
@@ -859,6 +933,9 @@ IMPORTANT Points::
 	- when interface INHERIT interface the term used is "EXTEND"
 	  and when class INHERIT interface the term used is "IMPLEMENTS"
 	- All "Legacy Classes" are Thread Synchronized.
+	- Collection Framework mainly has 2 parts:
+		1. Collection
+		2. Map
 	- Collection Framework only store Objects. 
 
 
